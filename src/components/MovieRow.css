@@ -3,26 +3,30 @@
 }
 
 .movieRow h2{
-    margin: 0px 0px 0px 30px;
+    margin: 0px 0px 0px 80px;
+    font-size: 22px;
 }
 
 .movieRow--listarea{
     overflow-x: hidden;
-    padding-left: 30px;
+    padding-left: 60px;
 }
 
 .movieRow--list{
-    width: 9999999px;
+    width: 9999999999px;
 }
 
 .movieRow--item{
     display: inline-block;
-    width: 150px;
+    width: 200px;
+    cursor: pointer;
 }
 
 .movieRow--item img{
     width: 100%;
+    border-radius: 8px;
     transform: scale(0.9);
+    transition: all ease 0.2s;
 }
 
 .movieRow--item img:hover{

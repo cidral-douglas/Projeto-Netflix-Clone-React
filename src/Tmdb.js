@@ -12,43 +12,64 @@ export default {
         return [
             {
                 slug: 'originals',
-                title: 'Originais do Netflix',
+                title: 'Popular on Netflix',
                 items: await basicFetch(`/discover/tv?with_network=213&api_key=${API_KEY}`)
             },
             {
                 slug: 'trending',
-                tile: 'Recomendados para Você',
+                title: 'Trending Now',
                 items: await basicFetch(`/trending/all/week?api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
-                title: 'Em Alta',
+                title: 'Top Rated',
                 items: await basicFetch(`/movie/top_rated?api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
-                title: 'Ação',
+                title: 'Action',
                 items: await basicFetch(`/discover/movie?with_genres=28&api_key=${API_KEY}`)
             },
             {
                 slug: 'comedy',
-                title: 'Comédia',
+                title: 'Comedy',
                 items: await basicFetch(`/discover/movie?with_genres=35&api_key=${API_KEY}`)
             },
             {
                 slug: 'horror',
-                title: 'Terror',
+                title: 'Horror',
                 items: await basicFetch(`/discover/movie?with_genres=27&api_key=${API_KEY}`)
             },
             {
                 slug: 'romance',
                 title: 'Romance',
                 items: await basicFetch(`/discover/movie?with_genres=10749&api_key=${API_KEY}`)
-            },{
+            },
+            {
                 slug: 'documentary',
-                title: 'Documentários',
+                title: 'Documentary',
                 items: await basicFetch(`/discover/movie?with_genres=99&api_key=${API_KEY}`)
             },
         ];
+    },
+
+    getMovieInfo: async (movieId, type) => {
+        let info = {};
+
+        if(movieId) {
+            switch(type) {
+                case 'movie':
+                    info = await basicFetch(`/movie/${movieId}?api_key=${API_KEY}`);
+                break;
+                case 'tv':
+                    info = await basicFetch(`/tv/${movieId}?api_key=${API_KEY}`);
+                break;
+                default:
+                    info = null;
+                break;
+            }
+        }
+
+        return info;
     }
 }
