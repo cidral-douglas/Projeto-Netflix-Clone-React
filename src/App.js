@@ -57,6 +57,12 @@ function App() {
         ))}
       </section>
 
+      <footer>
+        Réplica feita por <strong>Douglas Cidral</strong>, para fins didáticos <br/>
+        Direitos de imagem para <span>Netflix</span> <br/>
+        Dados pegos do site Themoviedb.org
+      </footer>
+
     </div>
   );
 }
