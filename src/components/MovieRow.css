@@ -51,7 +51,7 @@
 }
 
 .movieRow--list{
-    width: 9999999999px;
+    transition: all ease 0.5s;
 }
 
 .movieRow--item{
@@ -69,4 +69,8 @@
 
 .movieRow--item img:hover{
     transform: scale(1);
+}
+
+#hideArrow{
+    display: none;
 }
