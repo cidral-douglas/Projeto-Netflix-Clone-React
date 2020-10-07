@@ -4,7 +4,7 @@ import './MovieRow.css';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
-export default ({title, items})=> {
+export default ({slug, title, items})=> {
 
     const [scrollX, setScrollX] = useState(0);
 
@@ -36,7 +36,7 @@ export default ({title, items})=> {
             <div className="movieRow--listarea">
                 <div className="movieRow--list" style={{marginLeft: scrollX, width: items.results.length * 200}}>
                      {items.results.length > 0 && items.results.map((item, key)=>(                 
-                        <div key={key} className="movieRow--item">
+                        <div id={slug} key={key} className="movieRow--item">
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title}></img>
                         </div>
                      ))}

@@ -1,3 +1,3 @@
 # Netflix Clone - React.Js
 
-![Screenshot](Screenshots/Progress.png)
+![Screenshot](Screenshots/Netflix.png)
