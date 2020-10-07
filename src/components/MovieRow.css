@@ -74,3 +74,10 @@
 #hideArrow{
     display: none;
 }
+
+@media screen and (max-width: 760px) {
+    .movieRow--left, 
+    .movieRow--right {
+        opacity: 1;
+    }
+}
