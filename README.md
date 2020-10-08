@@ -5,6 +5,8 @@ Para ver como o projeto ficou:
 * Após término do download, faça a extração dos arquivos;
 * Abra a pasta "build" e abra o arquivo "index.html".
 
+---
+
 ![Screenshot](Screenshots/Netflix.png)
 
 ---
